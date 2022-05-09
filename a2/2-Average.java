@@ -28,7 +28,7 @@ public class Average {
         int recvbuf[] = new int[chunkSize];
         double avg[] = new double[1];
 
-        MPI.COMM_WORLD.Scatter(sendbuf,0,chunkSize,MPI.INT,recvbuf,0,chunkSize,MPI.DOUBLE,root);
+        MPI.COMM_WORLD.Scatter(sendbuf,0,chunkSize,MPI.INT,recvbuf,0,chunkSize,MPI.INT,root);
         System.out.println("Processor "+rank+" has data: "+recvbuf[0]);
    	    System.out.println("Processor "+rank+" is doubling the data");
         

@@ -12,6 +12,7 @@ public class Bully {
     	int tmpcoord = startid;
     	int i=startid;
     	int j=i+1;
+
     	for ( i=startid; i<num_proc ; i++) {
     		for ( j = i+1; j<num_proc ; j++) {
     			if(state[i]==true) {

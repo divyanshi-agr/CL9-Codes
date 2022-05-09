@@ -29,6 +29,7 @@ import java.io.FileWriter;
    		 }
    		 System.out.println();
    	 }
+
    	 int recvbuf[] = new int[1];
 	
 
@@ -36,6 +37,7 @@ import java.io.FileWriter;
    	 MPI.COMM_WORLD.Scatter(sendbuf, 0, 1, MPI.INT, recvbuf, 0, 1, MPI.INT, root);
    	 System.out.println("Processor "+rank+" has data: "+recvbuf[0]);
    	 System.out.println("Processor "+rank+" is doubling the data");
+		
    	 recvbuf[0]=recvbuf[0]*2;
 	
    	 MPI.COMM_WORLD.Gather(recvbuf, 0, 1, MPI.INT, sendbuf, 0, 1, MPI.INT, root);
