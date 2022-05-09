@@ -11,10 +11,11 @@ public class Server {
     public Server(int port)
     {
         try{
+            //create new socket for that port
             server = new ServerSocket(port);
             System.out.println("Server Started");
 
-            int i=1;
+            int i=1; //represents no.of clients in connection
             while(true)
             {
                 System.out.println("Waiting for a client");
